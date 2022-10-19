@@ -10,15 +10,15 @@ function App() {
   <>
   <nav>
     <ul>
-      <li>
+      <p>
         <Link to="/">Home</Link>
-      </li>
-      <li>
+      </p>
+      <p>
         <Link to="/about">about</Link>
-      </li>
-      <li>
+      </p>
+      <p>
         <Link to="/contact">contact</Link>
-      </li>
+      </p>
   </ul>
     
   </nav>
