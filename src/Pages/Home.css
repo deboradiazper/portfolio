@@ -1,5 +1,6 @@
 .home {
     margin-top: 2em;
+    color: #F2FAFF
 }
 
 .mainTitle {
@@ -14,18 +15,19 @@ button {
     position: relative;
     height: 50px;
     padding: 0 30px;
-    border: 2px solid #000;
-    background: #B9ACAC;
+    border: 2px solid rgba(0, 0, 0, 0);
+    background: none;
     user-select: none;
     white-space: nowrap;
     transition: all .05s linear;
     font-family: inherit;
+    color: #F9F871
    }
    
    button:before, button:after {
     content: "";
     position: absolute;
-    background: #B9ACAC;
+    background: none;
     transition: all .2s linear;
    }
    

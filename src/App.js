@@ -10,7 +10,7 @@ import { Particle } from "./components/Particle";
 function App() {
   return (
   <>
-        
+        <Particle/>
 
 
   <nav>

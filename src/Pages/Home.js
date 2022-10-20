@@ -20,7 +20,10 @@ export const Home = () => {
 
                 <div class="row">
                     <div class="col-6 col-md-4">
-                        About
+                    <button className="button">
+                            <span> About
+                            </span>
+                        </button>
                     </div>
                     <div class="col-6 col-md-4">
                         <h1 className="mainTitle">Hello I'm Débora.</h1>
@@ -31,9 +34,17 @@ export const Home = () => {
 
                 <div class="row">
                     <div class="col-md-9">
-                        Contact
+                    <button className="button">
+                            <span> Contact
+                            </span>
+                        </button>
                     </div>
-                    <div class="col-md-3">Projects</div>
+                    <div class="col-md-3 mt-4">
+                    <button className="button">
+                            <span> Projects
+                            </span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
