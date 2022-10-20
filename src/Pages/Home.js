@@ -4,7 +4,9 @@ import './Home.css';
 
 export const Home = () => {
     return (
+        
         <div>
+            
             <div class="container home">
                 <div class="row">
                     <div class="col-md-8"></div>
