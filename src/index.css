@@ -8,3 +8,7 @@ body {
 
 }
 
+button:hover {
+  cursor: crosshair;
+ }
+ 
