@@ -4,6 +4,8 @@ import { About } from "./Pages/About";
 import { NotFound } from "./Pages/NotFound";
 import { Contact } from "./Pages/Contact";
 import { Particle } from "./components/Particle";
+import { Technologies } from "./Pages/Technologies";
+import { Projects } from "./Pages/Projects";
 
 
 
@@ -31,6 +33,8 @@ function App() {
       <Route path="/" element={<Home />}/>
       <Route path="/about" element={<About />}/>
       <Route path="/contact" element={<Contact />}/>
+      <Route path="/technologies" element={<Technologies />}/>
+      <Route path="/projects" element={<Projects />}/>
       <Route path="*" element={<NotFound />}/>
     </Routes>
   </>

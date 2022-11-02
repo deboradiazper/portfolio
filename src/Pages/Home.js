@@ -1,20 +1,39 @@
 import React, { useState } from "react";
+import AOS from 'aos';
+
 import './Home.css';
 import { Contact } from "./Contact";
+import { Technologies } from "./Technologies";
+import { About } from "./About";
+import { Projects } from "./Projects";
+
 
 
 export const Home = () => {
 
 const [popUp, setPop] = useState(false)
+const [tech, setTech] = useState(false)
+const [about, setAbout] = useState(false)
+const [projects, setProjects] = useState(false)
 
 const handleClickOpen=()=> {
     setPop(!popUp)
 }
-
-//maybe no hace falta al final, al hacer click en el boton ya desaparece
-const closePopUp=()=>{
-    setPop(false)
+const handleClickTech=()=> {
+    setTech(!tech)
 }
+const handleClickAbout=()=> {
+    setAbout(!about)
+}
+const handleClickProjects=()=> {
+    setProjects(!projects)
+}
+
+
+
+
+
+
 
     return (
         
@@ -24,7 +43,7 @@ const closePopUp=()=>{
                 <div class="row">
                     <div class="col-md-8"></div>
                     <div class="col-6 col-md-4">
-                        <button className="button">
+                        <button onClick={handleClickTech} className="button">
                             Technologies
                         </button>
                     </div>
@@ -32,7 +51,7 @@ const closePopUp=()=>{
 
                 <div class="row">
                     <div class="col-6 col-md-4">
-                        <button className="button">
+                        <button onClick={handleClickAbout} className="button">
                                 About
                         </button>
                     </div>
@@ -54,7 +73,6 @@ const closePopUp=()=>{
                     <div className="main">
                         <div className="popup">
                                 <Contact/>
-                                <h1 onClick={closePopUp}>x</h1>
                         </div>
                     </div> : ""
                     }
@@ -62,7 +80,7 @@ const closePopUp=()=>{
                 <div class="row">
                     <div className="col-md-10"></div>
                     <div class="col-md-2 mt-4">
-                        <button className="button">
+                        <button onClick={handleClickProjects} className="button">
                                 Projects
                         </button>
                     </div>
@@ -70,14 +88,38 @@ const closePopUp=()=>{
             </div> 
         </div>
 
-{/* aquí aparecerían las secciones al hacer click en el menú */}
-        <div className="containerSections"> 
-        <section>1</section>
-        <section>2</section>
-        <section>3</section>
-        </div>
-
+<div className="container">
+    <div data-aos="fade-right">
+    { about ?
+                <div className="main">
+                    <div className="about">
+                            <About/>
+                    </div>
+                </div> : ""
+                }
+            </div>
+    <div className="technologies"> 
+    { tech ?
+                <div className="main">
+                    <div className="tech">
+                            <Technologies/>
+                    </div>
+                </div> : ""
+                }
     </div>
+    <div className="projects"> 
+    { tech ?
+                <div className="main">
+                    <div className="projects">
+                            <Projects/>
+                    </div>
+                </div> : ""
+                }
+    </div>
+       
+        
+        </div>
+        </div>
     )
 }
 
